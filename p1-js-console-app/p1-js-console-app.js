@@ -1,30 +1,22 @@
-// Support Ticket Console App
-// Start
+// Project Proposal: Support Ticket Console Application
+// Project Title: Support Ticket Management System
 
-// Show menu
-// Get user choice
+// Objective: To build a simple support ticket system that allows users to 
 
-// choice = 1
-// create ticket
+// 1. Record customer problems
+// 2. Track which problems are still open
+// 3. See which issues are urgent
+// 4. Mark issues as solved
+// 5. Find specific tickets quickly
 
-// choice = 2
-// view tickets
+// User Stories:
+// 1. As a user, I want to be able to record customer problems so I can keep track of them.
+// 2. As a user, I want to be able to track which problems are still open.
+// 3. As a user, I want to be able to track which issues are urgent and needs priority.
+// 4. As a user, I want to be able to mark issues solved for clean work.
+// 5. As a user, I want to be able to search specific tickets as quickly as possible.
 
-// choice = 3
-// search ticket
-
-// choice = 4
-// update ticket status
-
-// choice = 5
-// delete ticket
-
-// choice = 6
-// exit
-
-// Repeat until user exits
-
-// Include readline module
+// Loading the readline module
 const readline = require("readline");
 const rl = readline.createInterface({
   input: process.stdin,
@@ -44,7 +36,7 @@ function showMenu() {
   console.log("5. Delete Ticket");
   console.log("6. Exit");
 
-  rl.question("Choose a number: ", function(choice) { 
+  rl.question("\nChoose a number: ", (choice) => { 
     switch(choice) { 
       case "1": createTicket();
       break;            
@@ -65,11 +57,11 @@ function showMenu() {
   });
 }
 
-// Create Ticket
+// Creating and recording customer problems
 function createTicket() {
-  rl.question("Enter your ticket title: ", function(title) {
-    rl.question("Enter your ticket description: ", function(description) {
-      rl.question("Enter your priority level (Low / Medium / High): ", function(priority) {
+  rl.question("Enter your ticket title: ", (title) => {
+    rl.question("Enter your ticket description: ", (description) => {
+      rl.question("Enter your priority level (Low / Medium / High): ", (priority) => {
         if (priority === "Low" || priority === "Medium" || priority === "High") {
           let ticket = { 
             id: nextId,
@@ -81,7 +73,7 @@ function createTicket() {
           }
           tickets.push(ticket);
           nextId++;
-          console.log("Ticket has been created successfully!");
+          console.log("\nTicket has been created successfully!");
           showMenu();
         }
         else {
@@ -93,7 +85,7 @@ function createTicket() {
   });
 }
 
-// View Tickets
+// Viewing created tickets
 function viewTickets() {
   if (tickets.length === 0) {
     console.log("No tickets found.");
@@ -112,7 +104,7 @@ function viewTickets() {
   showMenu();
 }
 
-// Search Menu
+// Searching for specific tickets based on a category
 function searchTicket() {
   console.log("\nSearch By:");
   console.log("1. Ticket ID");
@@ -121,7 +113,7 @@ function searchTicket() {
   console.log("4. Low Priority");
   console.log("5. Medium Priority");
   console.log("6. High Priority");
-  rl.question("Choose search option: ", function(choice) {
+  rl.question("Choose search option: ", (choice) => {
     switch(choice) {
       case "1": searchById();
       break;
@@ -141,9 +133,9 @@ function searchTicket() {
   });
 }
 
-// Search by ID
+// Searching for tickets by ID
 function searchById() {
-  rl.question("Enter Ticket ID: ", function(id) {
+  rl.question("Enter Ticket ID: ", (id) => {
     let found = false;
     for (let i = 0; i < tickets.length; i++) {
       if (tickets[i].id == id) {
@@ -160,7 +152,7 @@ function searchById() {
   });
 }
 
-// Search by Status
+// Searching for tickets by status
 function searchByStatus(status) {
   let found = false;
   for (let i = 0; i < tickets.length; i++) {
@@ -176,7 +168,7 @@ function searchByStatus(status) {
   showMenu();
 }
 
-// Search by Priority
+// Searching for tickets by priority level
 function searchByPriority(priority) {
   let found = false;
   for (let i = 0; i < tickets.length; i++) {
@@ -192,19 +184,19 @@ function searchByPriority(priority) {
   showMenu();
 }
 
-// Update Ticket Status
+// Updating ticket status
 function updateTicket() {
-  rl.question("\nEnter ticket ID to update: ", function(id) {
+  rl.question("Enter ticket ID to update: ", (id) => {
     let found = false;
     for (let i = 0; i < tickets.length; i++) {
       if (tickets[i].id == id) {
-        rl.question("\nEnter new status (Open / Closed): ", function(status) {
+        rl.question("Enter new status (Open / Closed): ", (status) => {
           if (status === "Open" || status === "Closed") {
             tickets[i].status = status;
-            console.log("\nTicket has been updated!");
+            console.log("Ticket has been updated!");
             showMenu();
           } else {
-            console.log("\nInvalid status. Please enter Open or Closed.");
+            console.log("Invalid status. Please enter Open or Closed.");
             updateTicket();
           }
         });
@@ -213,15 +205,15 @@ function updateTicket() {
       }
     }
     if (!found) {
-      console.log("\nTicket not found.");
+      console.log("Ticket not found.");
       showMenu();
     }
   });
 }
 
-// Delete Ticket
+// Deleting unneeded/closed tickets
 function deleteTicket() {
-  rl.question("Enter ticket ID to delete: ", function(id) {
+  rl.question("Enter ticket ID to delete: ", (id) => {
     let found = false;
     for (let i = 0; i < tickets.length; i++) {
       if (tickets[i].id == id) {
@@ -232,7 +224,7 @@ function deleteTicket() {
       }
     }
     if (!found) {
-      console.log("Ticket not found.");
+      console.log("\nTicket not found.");
     }
     showMenu();
   });
