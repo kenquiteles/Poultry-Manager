@@ -1,0 +1,116 @@
+.financeSummaryContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dashboardHeader {
+  width: 100%;
+  background-color: #F5DEB3;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 15px 15px 10px #333333;
+  box-sizing: border-box;
+}
+
+.dashboardHeader h2 {
+  margin: 0 0 5px 0;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.subtext {
+  margin: 0;
+  color: #666;
+}
+
+.subtext strong {
+  color: #222;
+}
+
+.cardGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.summaryCard {
+  width: 100%;
+  background-color: #F5DEB3;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.cardBody h3 {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: -0.01em;
+}
+
+.cardFooter {
+  margin: 0;
+  color: #888;
+}
+
+.incomeCard {
+  border-left: 10px solid #2e7d32;
+}
+
+.expenseCard {
+  border-left: 10px solid #d32f2f;
+}
+
+.profitCard {
+  border-left: 10px solid #cc8f00;
+}
+
+.lossCard {
+  border-left: 10px solid #f57c00;
+}
+
+@media (max-width: 1024px) {
+  .cardGrid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .dashboardHeader,
+  .summaryCard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .dashboardHeader,
+  .summaryCard {
+    width: 270px;
+    font-size: x-small;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,36 @@
+nav {
+  width: 100vw;
+  background-color: #D4A373;
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  padding: 5px 15px;
+  box-shadow: 0 5px 15px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.logoutBtn {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #7e2d12;
+  color: #D4A373;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .navText {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  nav {
+    gap: 15px;
+  }
+}

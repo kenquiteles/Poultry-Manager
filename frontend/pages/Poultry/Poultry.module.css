@@ -1,0 +1,92 @@
+.poultryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageHeader {
+  background-color: #F5DEB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  width: 400px;
+  padding: 1rem;
+  border-radius: 5px;
+  align-self: center;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.addBtn {
+  background-color: #7e2d12;
+  border: none;
+  height: 28px;
+  padding: 0 10px;
+  margin-left: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d8b589;
+}
+
+.poultryCardContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  justify-content: space-around;
+  justify-items: center;
+  gap: 4rem;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.poultryCard {
+  background-color: #F5DEB3;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  box-shadow: 15px 15px 10px #333333;
+  opacity: .9;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardBtns button {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .pageHeader {
+    width: 270px;
+    font-size: xx-small;
+  }
+
+  .poultryCard {
+    width: 270px;
+    font-size: x-small;
+    padding: 1rem 1rem;
+  }
+
+  .cardBtns button {
+    font-size: x-small;
+  }
+
+  .addBtn {
+    font-size: x-small;
+    height: 23px;
+  }
+}

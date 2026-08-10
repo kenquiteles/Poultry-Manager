@@ -1,0 +1,177 @@
+.financePage {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageHeader {
+  background-color: #F5DEB3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: 400px;
+  padding: 1rem;
+  border-radius: 5px;
+  align-self: center;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.addBtn {
+  background-color: #7e2d12;
+  border: none;
+  height: 28px;
+  padding: 0 10px;
+  margin-left: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #d8b589;
+}
+
+.financeCardContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  justify-content: center;
+  justify-items: center;
+  gap: 4rem;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.financeCard {
+  background-color: #F5DEB3;
+  width: 100%;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  box-shadow: 15px 15px 10px #333333;
+  opacity: .9;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardBtns button {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+}
+
+.filterWrapper {
+  position: relative;
+}
+
+.filterBtn {
+  background-color: #7e2d12;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.filterMenu {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  background: #F5DEB3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 85px;
+  z-index: 20;
+}
+
+.filterMenu button {
+  background: transparent;
+  border: none;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.filterMenu button:hover {
+  background: #e7c89a;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toggle {
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s ease;
+  padding: 0;
+}
+
+.toggleKnob {
+  width: 20px;
+  height: 20px;
+  background: #7e2d12;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: 0.2s
+  ease;
+}
+
+.togglePaid {
+  background: #2e7d32;
+}
+
+.togglePaid .toggleKnob {
+  transform: translateX(22px);
+}
+
+.toggleUnpaid {
+  background: #bdbdbd;
+}
+
+.paidText {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.unpaidText {
+  color: #d32f2f;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 550px) {
+  .pageHeader {
+    width: 270px;
+    font-size: x-small;
+  }
+
+  .financeCard {
+    width: 270px;
+    font-size: small;
+  }
+}
