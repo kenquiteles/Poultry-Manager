@@ -1,0 +1,52 @@
+label input {
+  background-color: #ffd980;
+  color: black;
+  border: none;
+  border-radius: 2px;
+  padding: 2px;
+  width: 150px;
+}
+
+.duplicateMessage {
+  color: red;
+  font-size: "0.85rem";
+  margin-top: "4px";
+  display: "block";
+}
+
+.addInventoryPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.addInventoryPage input {
+  width: 130px;
+}
+
+.form {
+  width: 420px;
+  background-color: #F5DEB3;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardBtns button {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+}

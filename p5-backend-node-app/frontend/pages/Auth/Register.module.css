@@ -1,0 +1,59 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f7fb;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form input {
+    padding: 0.85rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.form input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.form button {
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #1d4ed8;
+}
+
+.linkText {
+    margin-top: 1rem;
+    text-align: center;
+}

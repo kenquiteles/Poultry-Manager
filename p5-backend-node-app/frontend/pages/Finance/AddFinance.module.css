@@ -1,0 +1,76 @@
+label input {
+  background-color: #ffd980;
+  color: black;
+  border: none;
+  border-radius: 2px;
+  padding: 2px;
+  width: 150px;
+}
+
+.addFinancePage {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.addFinancePage input {
+  width: 130px;
+}
+
+.form {
+  width: 420px;
+  background-color: #F5DEB3;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.form select {
+  margin-left: 1rem;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardBtns button {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+  font-size: small;
+}
+
+form select {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 0;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+  font-size: small;
+}
+
+@media (max-width: 410px) {
+  .addFinancePage {
+    font-size: small;
+  }
+
+  .cardBtns button {
+    font-size: small;
+  }
+
+  form select {
+    font-size: small;
+  }
+}

@@ -1,0 +1,79 @@
+label input {
+  background-color: #ffd980;
+  color: black;
+  border: none;
+  border-radius: 2px;
+  padding: 2px;
+  width: 140px;
+}
+
+.noPoultryMessage {
+  text-align: center;
+  padding: 20px;
+  color: red;
+  font-weight: bold;
+}
+
+.redirectBtn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.form {
+  width: 420px;
+  background-color: #F5DEB3;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.form select {
+  margin-left: 1rem;
+}
+
+.addProductionPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.addPoultryCard input {
+  width: 130px;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.cardBtns button {
+  background-color: #7e2d12;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d8b589;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .addProductionPage {
+    width: 270px;
+    font-size: x-small;
+  }
+
+  .cardBtns button {
+    font-size: x-small;
+  }
+
+  .addBtn {
+    font-size: x-small;
+    height: 23px;
+  }
+}

@@ -1,0 +1,115 @@
+.performanceDashboard {
+  width: 100%;
+  background-color: #F5DEB3;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 15px 15px 10px #333333;
+  margin-bottom: 2rem;
+}
+
+.emptyContainer {
+  padding: 30px;
+  text-align: center;
+}
+
+.warningMessage {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.cardContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.eggRecordsPage {
+  width: 100%;
+}
+
+.performanceCard {
+  background-color: #F5DEB3;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 400px;
+  box-shadow: 15px 15px 10px #333333;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.cardHeader h3 {
+  margin: 0;
+}
+
+.breedBadge {
+  background: #7e2d12;
+  color: #F5DEB3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.metricLabel {
+  color: #555;
+}
+
+.metricValue {
+  font-weight: bold;
+  color: #222;
+}
+
+.efficiencyText {
+  color: #2e7d32;
+}
+
+.progressContainer {
+  background: #f0f0f0;
+  border-radius: 4px;
+  height: 8px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.progressBar {
+  background: #4caf50;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .performanceCard {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .performanceDashboard,
+  .performanceCard {
+    width: 270px;
+    font-size: x-small;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

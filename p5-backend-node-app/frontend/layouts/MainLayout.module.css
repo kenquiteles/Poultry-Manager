@@ -1,0 +1,17 @@
+.topBar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin-top: 45px;
+  padding: 10px;
+  background-image: url('../assets/images/finalChicken.png');
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
