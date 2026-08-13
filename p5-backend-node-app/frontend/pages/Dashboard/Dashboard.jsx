@@ -3,6 +3,8 @@ import api from '../../api/axios.js';
 import MonthlyProfit from './MonthlyProfit.jsx';
 import EggEfficiency from './EggEfficiency.jsx';
 import styles from './Dashboard.module.css';
+import GeminiInsights from './GeminiInsights.jsx';
+
 const Dashboard = () => {
   const [poultry, setPoultry] = useState([]);
   const [production, setProduction] = useState([]);
@@ -28,6 +30,7 @@ const Dashboard = () => {
     <div className={styles.dashboard}>
       <aside className={styles.monthlyProfit}>
         <MonthlyProfit finance={finance} />
+        <GeminiInsights />
       </aside>
       <section className={styles.eggEfficiency}>
         <EggEfficiency poultry={poultry} production={production} />
